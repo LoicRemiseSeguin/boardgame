@@ -15,8 +15,8 @@ services:
       - 3000
     environment:
       - SERVICE_FQDN_BACKEND_3000
-      - PG_DB="boardgame"
-      - PG_USER="boardgame"
+      - PG_DB=boardgame
+      - PG_USER=boardgame
       - PG_PASSWORD=${BOARDGAME_DB_PASSWORD}
       - PG_HOST=db
     depends_on:
