@@ -6,7 +6,7 @@ services:
       - 3000:3000
     environment:
       - SERVICE_FQDN_FRONTEND_3000
-      - API_URL=${SERVICE_FQDN_FRONTEND_3000}
+      - API_URL=${SERVICE_FQDN_BACKEND_3000}
     restart: always
   backend:
     container_name: boardgame_backend
@@ -14,7 +14,7 @@ services:
     expose:
       - 3000
     environment:
-      - SERVICE_FQDN_FRONTEND_3000
+      - SERVICE_FQDN_BACKEND_3000
       - PG_DB="boardgame"
       - PG_USER="boardgame"
       - PG_PASSWORD=${BOARDGAME_DB_PASSWORD}
