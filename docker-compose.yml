@@ -10,8 +10,8 @@ services:
   backend:
     container_name: boardgame_backend
     build: ./backend
-  expose:
-    - "3000"
+    expose:
+      - "3000"
     environment:
         PG_DB: "boardgame"
         PG_USER: "boardgame"
