@@ -2,8 +2,8 @@ services:
   frontend:
     container_name: boardgame_frontend
     build: ./frontend
-    ports:
-      - 3000:3000
+    expose:
+      - 3000
     environment:
       - SERVICE_FQDN_FRONTEND_3000
       - API_URL=${SERVICE_FQDN_BACKEND_3000}
